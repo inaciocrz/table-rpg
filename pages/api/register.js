@@ -6,7 +6,7 @@ export default async function handler(req, res){
 
     if (req.method == "POST"){
         try {
-            if (await User.findOne(req.name))
+            if (await User.findOne({name: req.body.name}))
                 return res.status(400).json({success: false, error: "User already exists"});
             
             const user = await User.create(req.body);
