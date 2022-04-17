@@ -9,7 +9,7 @@ export default function Home() {
   });
   return (
     <>
-      <Unity unityContext={unityContext} style={{width: 480, height: 320}}/>
+      <Unity unityContext={unityContext}/>
       <button onClick={()=>{unityContext.setFullscreen(true)}}>FullScreen</button>
     </>
   );
